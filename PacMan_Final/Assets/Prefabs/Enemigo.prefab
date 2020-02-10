@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 7227123779031870688}
   - component: {fileID: -4855768368812843624}
   - component: {fileID: -4652517381409639103}
+  - component: {fileID: 1129851079795985242}
   m_Layer: 0
   m_Name: Enemigo
-  m_TagString: Untagged
+  m_TagString: Enemigo
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -129,3 +130,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
+--- !u!114 &1129851079795985242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3432976568816651404}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbbe86b40979144b9dc5cca65cf40d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 15
