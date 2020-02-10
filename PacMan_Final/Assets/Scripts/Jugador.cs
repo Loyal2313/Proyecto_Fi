@@ -21,9 +21,8 @@ public class Jugador : MonoBehaviour
 
 	}
 
-    void OnTriggerEnter(Collider other)
+    void OnTriggerEnter2D(Collider2D other)
     {
-
         //Si atraviesa con el coleccionable
         if (other.gameObject.CompareTag("Coleccionable"))
         {
@@ -31,7 +30,7 @@ public class Jugador : MonoBehaviour
             other.gameObject.SetActive(false);
 
             //Capturo un array con todos los objetos que tengan la etiqueta enemigo
-            GameObject[] enemigos = GameObject.FindGameObjectsWithTag("enemigo");
+            //GameObject[] enemigos = GameObject.FindGameObjectsWithTag("enemigo");
 
             /*//Recorro ese array y los destruyo
             foreach (GameObject enemigo in enemigos)

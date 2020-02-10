@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4723132878342079807}
   - component: {fileID: 1177049545587924163}
   m_Layer: 0
-  m_Name: Coleccionable
+  m_Name: Coleccionable Esp
   m_TagString: Coleccionable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,7 +50,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 27f46fc3c0d748646a688e6ca11aaf47, type: 2}
+  - {fileID: 2100000, guid: c87fe2e8986d9f04b974cef850d3eef2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
