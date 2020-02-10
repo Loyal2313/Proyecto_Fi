@@ -933,6 +933,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!1 &430345160 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3432976568816651404, guid: d5e39c22511f54f47a559f078840c794,
+    type: 3}
+  m_PrefabInstance: {fileID: 7385584998361481723}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &430345164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 430345160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1dbbe86b40979144b9dc5cca65cf40d5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocidad: 20
 --- !u!1 &435024873
 GameObject:
   m_ObjectHideFlags: 0
@@ -2628,7 +2647,7 @@ GameObject:
   - component: {fileID: 1020177767}
   m_Layer: 0
   m_Name: Jugador
-  m_TagString: Untagged
+  m_TagString: Jugador
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -4817,12 +4836,12 @@ PrefabInstance:
     - target: {fileID: 750243892593638837, guid: d5e39c22511f54f47a559f078840c794,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.2
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 750243892593638837, guid: d5e39c22511f54f47a559f078840c794,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.4
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 750243892593638837, guid: d5e39c22511f54f47a559f078840c794,
         type: 3}
