@@ -7,18 +7,38 @@ public class Jugador : MonoBehaviour
 
 	//Velocidad
 	public float velocidad = 30.0f;
+	
+	private Rigidbody rb;
+	public bool huir = false;
+    private float tiempo;
+	public int vidas = 3;
 
+	void Start () {
+
+        //Capturo el componente rigidbody del jugador
+        rb = GetComponent<Rigidbody>();	
+	}
 
 	// Es llamado una vez cada fixed frame
 	void FixedUpdate()
 	{
-
-		//Capto el valor del eje vertical y horizontal de la raqueta
+		//Capto el valor del eje vertical y horizontal
 		float v = Input.GetAxisRaw("Vertical");
 		float h = Input.GetAxisRaw("Horizontal");
 		//Modifico la velocidad de la raqueta
 		GetComponent<Rigidbody2D>().velocity = new Vector2(h * velocidad, v * velocidad);
 
+		//Si los enemigos están huyendo y nos e ha acabado el tiempo, decremento el tiempo
+        if (huir && tiempo > 0)
+        {
+            tiempo -= Time.deltaTime;
+            //Lo muestro en consola
+            Debug.Log(tiempo);
+        }
+        else
+        {
+            huir = false;
+        }
 	}
 
     void OnTriggerEnter2D(Collider2D other)
@@ -29,6 +49,7 @@ public class Jugador : MonoBehaviour
             //Borro el coleccionable
             other.gameObject.SetActive(false);
 
+			vidas--;
             //Capturo un array con todos los objetos que tengan la etiqueta enemigo
             //GameObject[] enemigos = GameObject.FindGameObjectsWithTag("enemigo");
 
@@ -38,7 +59,6 @@ public class Jugador : MonoBehaviour
                 Destroy(enemigo);
             }*/
         }
-
     }
 }
 
