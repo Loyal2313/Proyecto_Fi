@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Enemigo.cs" />
+    <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\Jugador.cs" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/matap/source/repos/Proyecto_Fi2/PacMan_Final/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

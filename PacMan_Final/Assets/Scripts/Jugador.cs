@@ -20,4 +20,45 @@ public class Jugador : MonoBehaviour
 		GetComponent<Rigidbody2D>().velocity = new Vector2(h * velocidad, v * velocidad);
 
 	}
+
+    void OnTriggerEnter(Collider other)
+    {
+
+        //Si atraviesa con el coleccionable
+        if (other.gameObject.CompareTag("Coleccionable"))
+        {
+            //Borro el coleccionable
+            other.gameObject.SetActive(false);
+
+            //Capturo un array con todos los objetos que tengan la etiqueta enemigo
+            GameObject[] enemigos = GameObject.FindGameObjectsWithTag("enemigo");
+
+            /*//Recorro ese array y los destruyo
+            foreach (GameObject enemigo in enemigos)
+            {
+                Destroy(enemigo);
+            }*/
+        }
+
+    }
 }
+
+/*public class ScriptDeltaTime : MonoBehaviour
+{
+    public GUIText guitext;
+
+    int number = 0;
+
+    float secondsCounter = 0;
+    float secondsToCount = 1;
+
+    void Update()
+    {
+        secondsCounter += Time.deltaTime;
+        if (secondsCounter >= secondsToCount)
+        {
+            secondsCounter = 0;
+            number++;
+        }
+        guitext.text = number.ToString();
+    }*/
