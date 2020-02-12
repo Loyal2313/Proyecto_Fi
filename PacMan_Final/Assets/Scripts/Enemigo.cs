@@ -51,9 +51,8 @@ public class Enemigo : MonoBehaviour
 		}
     }
 
-	public void OnTriggerEnter2D(Collider2D other)
+	public void OnCollisionEnter2D(Collision2D other)
     {
-
         //Si se choca con el jugador
         if (other.gameObject.CompareTag("Jugador"))
         {

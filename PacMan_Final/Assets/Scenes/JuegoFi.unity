@@ -1093,12 +1093,12 @@ MonoBehaviour:
   enemigo: {fileID: 3432976568816651404, guid: d5e39c22511f54f47a559f078840c794, type: 3}
   coleccionable: {fileID: 4895371231148586983, guid: f1ab680e5661fdb40a932eb995f3ca22,
     type: 3}
-  posicion: {x: 30, y: 10, z: 30}
-  numeroEnemigos: 0
-  esperaInicial: 0
-  esperaEntreEnemigos: 0
-  esperaEntreOlas: 0
-  esperaEntreColeccionables: 0
+  posicion: {x: 0, y: 30, z: 30}
+  numeroEnemigos: 100
+  esperaInicial: 100
+  esperaEntreEnemigos: 100
+  esperaEntreOlas: 100
+  esperaEntreColeccionables: 10
 --- !u!4 &267548524
 Transform:
   m_ObjectHideFlags: 0
@@ -4367,6 +4367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 30
+  huir: 0
   vidas: 3
 --- !u!50 &1020177768
 Rigidbody2D:
