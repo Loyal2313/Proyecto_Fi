@@ -2,18 +2,22 @@
 using UnityEngine;
 public class GameManager : MonoBehaviour
 {
-    public GameObject enemigo, coleccionable;
+    public GameObject enemigo, coleccionable, trampaH, trampaV;
     public Vector3 posicion;
     public int numeroEnemigos;
     public float esperaInicial;
     public float esperaEntreEnemigos;
     public float esperaEntreOlas, esperaEntreColeccionables;
+	public float intervaloTrampas;
+
     void Start()
     {
         //LLamo a la rutina de crear enemigos
         StartCoroutine(crearEnemigos());
         //LLamo a la rutina de crear coleccionables
         StartCoroutine(crearColeccionables());
+		//LLamo a la rutina de Intervalo de trampas
+        StartCoroutine(crearTrampas());
     }
     IEnumerator crearEnemigos()
     {
@@ -39,6 +43,7 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(esperaEntreOlas);
         }
     }
+
     IEnumerator crearColeccionables()
     {
         yield return new WaitForSeconds(esperaInicial);
@@ -51,6 +56,52 @@ public class GameManager : MonoBehaviour
 
             //Espero un tiempo entre la creación de cada coleccionable
             yield return new WaitForSeconds(esperaEntreColeccionables);
+        }
+    }
+
+	IEnumerator crearTrampas()
+    {
+		GameObject[] trampasH = GameObject.FindGameObjectsWithTag("TrampaH");
+		GameObject[] trampasV = GameObject.FindGameObjectsWithTag("TrampaV");
+		
+		foreach (GameObject trampaV in trampasV)
+		{
+			trampaV.SetActive (false);
+		}
+
+        yield return new WaitForSeconds(esperaInicial);
+        while (true)
+        {	
+			if(trampasH.SetActive = true)
+			{
+				foreach (GameObject TrampaH in trampasH)
+				{
+					trampaH.SetActive (false);
+				}
+			}
+			else{
+				foreach (GameObject TrampaH in trampasH)
+				{
+					trampaH.SetActive (false);
+				}
+			}
+			
+			if(trampasV.SetActive = true)
+			{
+				foreach (GameObject trampaV in trampasV)
+				{
+					trampaV.SetActive (false);
+				}
+			}
+			else{
+				foreach (GameObject trampaV in trampasV)
+				{
+					trampaV.SetActive (false);
+				}
+			}
+
+            //Espero un tiempo entre el intervalo de trampas.
+            yield return new WaitForSeconds(intervaloTrampas);
         }
     }
 
