@@ -14,7 +14,6 @@ public class Jugador : MonoBehaviour
 	public int vidas = 3;
 
 	void Start () {
-
         //Capturo el componente rigidbody del jugador
         rb = GetComponent<Rigidbody>();	
 	}

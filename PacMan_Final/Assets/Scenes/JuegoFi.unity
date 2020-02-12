@@ -1093,15 +1093,16 @@ MonoBehaviour:
   enemigo: {fileID: 3432976568816651404, guid: d5e39c22511f54f47a559f078840c794, type: 3}
   coleccionable: {fileID: 4895371231148586983, guid: f1ab680e5661fdb40a932eb995f3ca22,
     type: 3}
-  trampaH: {fileID: 0}
-  trampaV: {fileID: 0}
+  trampaH: {fileID: 1663712159}
+  trampaV: {fileID: 709808881}
   posicion: {x: 0, y: 30, z: 30}
   numeroEnemigos: 100
   esperaInicial: 5
-  esperaEntreEnemigos: 100
-  esperaEntreOlas: 100
+  esperaEntreEnemigos: 5
+  esperaEntreOlas: 10
   esperaEntreColeccionables: 10
-  intervaloTrampas: 10
+  intervaloTrampas: 5
+  cambio: 1
 --- !u!4 &267548524
 Transform:
   m_ObjectHideFlags: 0
@@ -2686,11 +2687,11 @@ GameObject:
   - component: {fileID: 709808882}
   m_Layer: 0
   m_Name: Verticales
-  m_TagString: Untagged
+  m_TagString: TrampaV
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &709808882
 Transform:
   m_ObjectHideFlags: 0
@@ -4506,7 +4507,7 @@ GameObject:
   - component: {fileID: 1075648192}
   - component: {fileID: 1075648191}
   m_Layer: 0
-  m_Name: Derecha (1)
+  m_Name: trampaV
   m_TagString: TrampaV
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4810,7 +4811,7 @@ GameObject:
   - component: {fileID: 1163341475}
   - component: {fileID: 1163341474}
   m_Layer: 0
-  m_Name: Arriba (1)
+  m_Name: trampaH
   m_TagString: TrampaH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6738,7 +6739,7 @@ GameObject:
   - component: {fileID: 1663712160}
   m_Layer: 0
   m_Name: Horizontales
-  m_TagString: Untagged
+  m_TagString: TrampaH
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
