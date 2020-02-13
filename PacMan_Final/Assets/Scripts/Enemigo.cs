@@ -15,7 +15,8 @@ public class Enemigo : MonoBehaviour
     Vector2 posicion;
 
     void Start()
-    {
+    {	
+
         jugador = GameObject.FindGameObjectWithTag("Jugador");
 
 		enemigo = GameObject.FindGameObjectWithTag("Enemigo");

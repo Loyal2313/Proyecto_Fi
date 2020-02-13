@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     public float esperaEntreEnemigos;
     public float esperaEntreOlas, esperaEntreColeccionables;
 	public float intervaloTrampas;
-	public bool cambio = false;
+	//public bool cambio = false;
 
     void Start()
     {	
@@ -69,19 +69,17 @@ public class GameManager : MonoBehaviour
 
 		yield return new WaitForSeconds(esperaInicial);
         while (true)
-        {
-			if(cambio == false)
+        {	
+			foreach (GameObject trampaV in trampasV)
 			{
-				foreach (GameObject trampaV in trampasV)
-				{
-					trampaV.SetActive (true);
-				}
-				foreach (GameObject trampaH in trampasH)
-				{
-					trampaH.SetActive (false);
-				}
+				trampaV.SetActive (true);
 			}
-			if(cambio == true){
+			foreach (GameObject trampaH in trampasH)
+			{
+				trampaH.SetActive (false);
+			}
+			//Espero un tiempo entre el intervalo de trampas.			
+			yield return new WaitForSeconds(intervaloTrampas);
 				foreach (GameObject TrampaV in trampasV)
 				{
 					trampaV.SetActive (false);
@@ -90,17 +88,8 @@ public class GameManager : MonoBehaviour
 				{
 					trampaH.SetActive (true);
 				}
-			}
 			//Espero un tiempo entre el intervalo de trampas.
             yield return new WaitForSeconds(intervaloTrampas);
-			if(cambio == false)
-			{
-				cambio = true;
-			}
-			if(cambio == true)
-			{
-				cambio = false;
-			}
         }
 	}
 
