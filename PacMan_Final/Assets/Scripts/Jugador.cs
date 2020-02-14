@@ -58,6 +58,17 @@ public class Jugador : MonoBehaviour
                 Destroy(enemigo);
             }*/
         }
+		if (other.gameObject.CompareTag("Armamento"))
+        {	
+			other.gameObject.SetActive(false);
+			tiempo = 10;
+			huir=true;
+		}
+		if (other.gameObject.CompareTag("Vida"))
+        {	
+			other.gameObject.SetActive(false);
+			vidas++;
+		}
     }
 }
 

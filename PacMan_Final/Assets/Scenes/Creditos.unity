@@ -747,12 +747,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemigo: {fileID: 1271841316}
   coleccionable: {fileID: 1271841316}
+  trampaH: {fileID: 0}
+  trampaV: {fileID: 0}
   posicion: {x: 0, y: 0, z: 0}
   numeroEnemigos: 100
   esperaInicial: 100
   esperaEntreEnemigos: 100
   esperaEntreOlas: 100
   esperaEntreColeccionables: 100
+  intervaloTrampas: 0
 --- !u!1 &1271841316
 GameObject:
   m_ObjectHideFlags: 0
@@ -864,7 +867,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1323702164}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 11500000, guid: 3c6acc7aec437514cbb9fe3be4ab9dd3, type: 3}
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1323702164
