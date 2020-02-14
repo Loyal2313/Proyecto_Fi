@@ -103,6 +103,11 @@ public class GameManager : MonoBehaviour
         Application.LoadLevel("JuegoFi");
     }
 
+	public void credi()
+    {
+        Application.LoadLevel("Creditos");
+    }
+
     public void Quit()
     {
         Application.Quit();

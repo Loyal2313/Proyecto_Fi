@@ -1101,7 +1101,7 @@ MonoBehaviour:
   esperaEntreEnemigos: 5
   esperaEntreOlas: 10
   esperaEntreColeccionables: 10
-  intervaloTrampas: 5
+  intervaloTrampas: 2
 --- !u!4 &267548524
 Transform:
   m_ObjectHideFlags: 0
@@ -8145,7 +8145,7 @@ PrefabInstance:
     - target: {fileID: 750243892593638837, guid: d5e39c22511f54f47a559f078840c794,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -10
+      value: -6.2
       objectReference: {fileID: 0}
     - target: {fileID: 750243892593638837, guid: d5e39c22511f54f47a559f078840c794,
         type: 3}
