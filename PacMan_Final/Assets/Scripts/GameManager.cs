@@ -1,26 +1,40 @@
 ﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+
 public class GameManager : MonoBehaviour
 {
-    public GameObject enemigo, coleccionable, trampaH, trampaV;
-
-    public Vector3 posicion;
+    public GameObject enemigo, trampaH, trampaV;
+    public Vector2 posicion;
     public int numeroEnemigos;
     public float esperaInicial;
     public float esperaEntreEnemigos;
-    public float esperaEntreOlas, esperaEntreColeccionables;
 	public float intervaloTrampas;
-	//public bool cambio = false;
 
     void Start()
     {	
         //LLamo a la rutina de crear enemigos
         StartCoroutine(crearEnemigos());
-        //LLamo a la rutina de crear coleccionables
-        StartCoroutine(crearColeccionables());
 		//LLamo a la rutina de Intervalo de trampas
         StartCoroutine(crearTrampas());
     }
+
+	void Update () {
+		if (Input.GetKeyDown(KeyCode.P)){
+			//Paro el tiempo
+			Time.timeScale = 0;			   
+		}
+		if (Input.GetKeyDown(KeyCode.O)){
+			//Paro el tiempo
+			Time.timeScale = 1;			   
+		}
+		if (Input.GetKeyDown(KeyCode.R)){
+			//Reinicio al menu
+            SceneManager.LoadScene("menu");
+		}
+	}
 
     IEnumerator crearEnemigos()
     {
@@ -34,31 +48,13 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < numeroEnemigos; i++)
             {
                 //Instancio el enemigo en una posición aleatoria del tablero
-                Vector3 posicionEnemigo = new Vector3(Random.Range(-posicion.x, posicion.x), posicion.y, Random.Range(-posicion.z, posicion.z));
+                Vector2 posicionEnemigo = new Vector2(Random.Range(-posicion.x, posicion.x), Random.Range(-posicion.y, posicion.y));
                 Quaternion rotacionEnemigo = Quaternion.identity;
                 Instantiate(enemigo, posicionEnemigo, rotacionEnemigo);
 
                 //Espero un tiempo entre la creación de cada enemigo
                 yield return new WaitForSeconds(esperaEntreEnemigos);
             }
-
-            //Espero un tiempo entre oleadas de enemigos
-            yield return new WaitForSeconds(esperaEntreOlas);
-        }
-    }
-
-    IEnumerator crearColeccionables()
-    {
-        yield return new WaitForSeconds(esperaInicial);
-        while (true)
-        {
-            //Instancio el coleccionable en una posición aleatoria del tablero
-            Vector3 posicionColeccionable = new Vector3(Random.Range(-posicion.x, posicion.x), posicion.y, Random.Range(-posicion.z, posicion.z));
-            Quaternion rotacionColeccionable = Quaternion.identity;
-            Instantiate(coleccionable, posicionColeccionable, rotacionColeccionable);
-
-            //Espero un tiempo entre la creación de cada coleccionable
-            yield return new WaitForSeconds(esperaEntreColeccionables);
         }
     }
 
