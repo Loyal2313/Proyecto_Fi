@@ -1,0 +1,111 @@
+/* LAYOUT *************************************************************************************************************/
+
+html{
+    color: white;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: #140007;
+}
+
+nav{
+    background-color: black;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    padding: 0 2rem;
+    border: solid 2px #808200;
+}
+
+nav img{
+    width: 2.5rem;
+    padding-top: 0.8rem;
+}
+
+main {
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+header h1{
+    font-size: 3rem;
+    margin: 1rem 0 0 0;
+}
+
+header h2{
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+    border: solid 2px #808200;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+header h1 {
+    margin-top: 2%;
+    text-align: center;
+}
+
+/* SECTION ************************************************************************************************************/
+
+section h3{
+    font-size: 1.5rem;
+    border-bottom: 1px solid #808200;
+    padding-bottom: 0.3rem;
+}
+
+section h3 a{
+    color: yellow;
+}
+
+section input {
+    color: white;
+}
+
+section button {
+    color: yellow;
+    background-color: black;
+    border: 2px solid #808200;
+    width: 8rem;
+    font-size: 1rem;
+    padding: 0.7%;
+    font-weight: bold;
+}
+
+section button:hover {
+    cursor: pointer;
+}
+
+section a {
+    color: yellow;
+    font-weight: normal;
+}
+
+section .col-12 {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.error {
+    color: yellow;
+}
+
+.partida {
+    font-size: 1.5rem;
+}

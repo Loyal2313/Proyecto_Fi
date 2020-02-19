@@ -1,0 +1,85 @@
+/* LAYOUT *************************************************************************************************************/
+
+html{
+    color: black;
+}
+
+body{
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    background-color: white;
+}
+
+nav{
+    background-color: black;
+    box-shadow: none;
+    -webkit-box-shadow: none;
+    padding: 0 2rem;
+    border: solid 2px #822c6a;
+}
+
+nav img{
+    width: 2rem;
+    padding-top: 0.8rem;
+}
+
+main {
+    flex: 1 0 auto;
+    width: 100%;
+    max-width: 1920px;
+    padding: 0 2rem;
+    margin: 0 auto;
+}
+
+header h1{
+    font-size: 3rem;
+    margin: 1rem 0 0 0;
+}
+
+header h2{
+    font-size: 2rem;
+    margin: 1rem 0;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 1rem 0;
+    border: solid 2px #000382;
+}
+
+footer a{
+    color: white;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+/* SECTION ************************************************************************************************************/
+
+section h3{
+    font-size: 3rem;
+    border-bottom: 1px solid #333;
+    padding-bottom: 0.3rem;
+}
+
+section h3 a{
+    color: #333;
+}
+
+section h3 span{
+    font-weight:normal;
+    color: #444;
+}
+
+section button {
+    font-size: 1rem;
+    padding: 0.5%;
+    border: solid 2px black;
+}
+
+section button:hover {
+    cursor: pointer;
+}
