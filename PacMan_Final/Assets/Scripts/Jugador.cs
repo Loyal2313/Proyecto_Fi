@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -34,7 +35,6 @@ public class Jugador : MonoBehaviour
         //Capturo el componente rigidbody del jugador
         rb = GetComponent<Rigidbody>();	
 	}
-
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.P))

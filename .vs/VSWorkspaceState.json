@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\PacMan_Final"
+    "\\PacMan_Final",
+    "\\PacMan_Final\\Assets",
+    "\\PacMan_Final\\Assets\\Scenes"
   ],
+  "SelectedNode": "\\PacMan_Final\\Assets\\Scenes\\JuegoFi.unity",
   "PreviewInSolutionExplorer": false
 }

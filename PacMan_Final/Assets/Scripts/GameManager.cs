@@ -12,7 +12,6 @@ public class GameManager : MonoBehaviour
     public float esperaInicial;
     public float esperaEntreEnemigos;
 	public float intervaloTrampas;
-
     void Start()
     {	
         //LLamo a la rutina de crear enemigos
@@ -20,7 +19,6 @@ public class GameManager : MonoBehaviour
 		//LLamo a la rutina de Intervalo de trampas
         StartCoroutine(crearTrampas());
     }
-
     IEnumerator crearEnemigos()
     {
         //Espero un tiempo antes de crear enemigos
@@ -34,15 +32,6 @@ public class GameManager : MonoBehaviour
             {
                 //Instancio el enemigo en una posición aleatoria del tablero
                 Vector2 posicionEnemigo = new Vector2(Random.Range(-posicion.x, posicion.x), Random.Range(-posicion.y, posicion.y));
-
-                Vector2 sizeEnemigo = enemigo.transform.localScale;
-
-                int size = Random.Range(-6, 6);
-                sizeEnemigo.x = size;
-                sizeEnemigo.y = size;
-                //Vector2 sizeEnemigo = new Vector2(-size, size);
-                enemigo.transform.localScale = sizeEnemigo;
-
                 Quaternion rotacionEnemigo = Quaternion.identity;
                 Instantiate(enemigo, posicionEnemigo, rotacionEnemigo);
 
@@ -51,7 +40,6 @@ public class GameManager : MonoBehaviour
             }
         }
     }
-
 	IEnumerator crearTrampas()
 	{	
 		GameObject[] trampasH = GameObject.FindGameObjectsWithTag("TrampaH");
@@ -82,15 +70,21 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(intervaloTrampas);
         }
 	}
+    //COnfiguraciones de los botones
 
-	public void MainMenu()
-    {
-        SceneManager.LoadScene("menu");
-    }
-    
     public void Play()
     {
         SceneManager.LoadScene("JuegoFi");
+    }
+
+    public void Registro()
+    {
+        Application.OpenURL("");//Enlace de la web HUGO
+    }
+
+    public void Volver()
+    {
+        SceneManager.LoadScene("Menu");
     }
 
 	public void credi()
