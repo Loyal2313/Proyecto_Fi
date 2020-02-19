@@ -1,25 +1,44 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class Jugador : MonoBehaviour
 {
 
 	//Velocidad
 	public float velocidad = 30.0f;
-	
 	private Rigidbody rb;
 	public bool huir = false;
     private float tiempo;
-	public int vidas = 3;
+	private int vidas = 3;
+    private int puntos = 480;
 
 	void Start () {
         //Capturo el componente rigidbody del jugador
         rb = GetComponent<Rigidbody>();	
 	}
 
-	// Es llamado una vez cada fixed frame
-	void FixedUpdate()
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            //Paro el tiempo
+            Time.timeScale = 0;
+        }
+        if (Input.GetKeyDown(KeyCode.O))
+        {
+            //Paro el tiempo
+            Time.timeScale = 1;
+        }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            //Reinicio al menu
+            SceneManager.LoadScene("menu");
+        }
+    }
+
+    // Es llamado una vez cada fixed frame
+    void FixedUpdate()
 	{
 		//Capto el valor del eje vertical y horizontal
 		float v = Input.GetAxisRaw("Vertical");

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -20,21 +19,6 @@ public class GameManager : MonoBehaviour
 		//LLamo a la rutina de Intervalo de trampas
         StartCoroutine(crearTrampas());
     }
-
-	void Update () {
-		if (Input.GetKeyDown(KeyCode.P)){
-			//Paro el tiempo
-			Time.timeScale = 0;			   
-		}
-		if (Input.GetKeyDown(KeyCode.O)){
-			//Paro el tiempo
-			Time.timeScale = 1;			   
-		}
-		if (Input.GetKeyDown(KeyCode.R)){
-			//Reinicio al menu
-            SceneManager.LoadScene("menu");
-		}
-	}
 
     IEnumerator crearEnemigos()
     {

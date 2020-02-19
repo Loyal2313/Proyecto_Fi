@@ -1557,13 +1557,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemigo: {fileID: 1271841316}
-  coleccionable: {fileID: 1271841316}
-  posicion: {x: 0, y: 0, z: 0}
+  trampaH: {fileID: 1271841316}
+  trampaV: {fileID: 1248531010}
+  posicion: {x: 0, y: 0}
   numeroEnemigos: 100
   esperaInicial: 100
   esperaEntreEnemigos: 100
-  esperaEntreOlas: 100
-  esperaEntreColeccionables: 100
+  intervaloTrampas: 0
 --- !u!1 &1271841316
 GameObject:
   m_ObjectHideFlags: 0
