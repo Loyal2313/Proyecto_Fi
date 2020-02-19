@@ -10,8 +10,6 @@ public class MostrarUsu : MonoBehaviour
     [SerializeField] private string inputFieldContraseña;
     private Usuario usuario;
     private string url = "http://18.184.61.233/Unity/public/unity.php";
-    public float velocidad = 100;
-
 
     void ComprobarUsuarioYContraseña()
     {

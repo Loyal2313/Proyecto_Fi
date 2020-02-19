@@ -340,7 +340,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 63755299}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 72, y: -40, z: 0}
+  m_LocalPosition: {x: 72, y: -49.5, z: 0}
   m_LocalScale: {x: 24.812695, y: 0.35814026, z: 1}
   m_Children: []
   m_Father: {fileID: 1213664391}
@@ -583,6 +583,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 28
@@ -1247,8 +1249,6 @@ MonoBehaviour:
   esperaInicial: 5
   esperaEntreEnemigos: 5
   intervaloTrampas: 5
-  AudioEnemigo: {fileID: 8300000, guid: 43921d765ba194b49adac0dbff049f18, type: 3}
-  AudioTrampas: {fileID: 8300000, guid: 0a5fffcb6be8d7346ae58dcd0723a387, type: 3}
 --- !u!4 &267548524
 Transform:
   m_ObjectHideFlags: 0
@@ -1459,7 +1459,7 @@ PrefabInstance:
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6
+      value: 20.2
       objectReference: {fileID: 0}
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
@@ -2923,6 +2923,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 28
@@ -3045,7 +3047,7 @@ PrefabInstance:
     - target: {fileID: 750243892593638837, guid: d5e39c22511f54f47a559f078840c794,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 750243892593638837, guid: d5e39c22511f54f47a559f078840c794,
         type: 3}
@@ -3255,6 +3257,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 28
@@ -3552,6 +3556,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 28
@@ -3787,7 +3793,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 775593833}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 72, y: -40, z: 0}
+  m_LocalPosition: {x: 72, y: -49.5, z: 0}
   m_LocalScale: {x: 0.4962539, y: 16.116312, z: 1}
   m_Children: []
   m_Father: {fileID: 1213664391}
@@ -5087,7 +5093,7 @@ PrefabInstance:
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6
+      value: 20.2
       objectReference: {fileID: 0}
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
@@ -5664,7 +5670,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 55
+  orthographic size: 65
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -5688,7 +5694,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1090162083}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -6.5999985, z: -10}
+  m_LocalPosition: {x: 0, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -5931,6 +5937,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 28
@@ -6371,7 +6379,7 @@ PrefabInstance:
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16
+      value: 30.2
       objectReference: {fileID: 0}
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
@@ -6701,6 +6709,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
@@ -7591,6 +7601,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 22
@@ -8288,6 +8300,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 28
@@ -8542,7 +8556,7 @@ PrefabInstance:
     - target: {fileID: 4895371231148586982, guid: f1ab680e5661fdb40a932eb995f3ca22,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -24
+      value: -16.9
       objectReference: {fileID: 0}
     - target: {fileID: 4895371231148586982, guid: f1ab680e5661fdb40a932eb995f3ca22,
         type: 3}
@@ -8739,7 +8753,7 @@ PrefabInstance:
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -50
+      value: -59.5
       objectReference: {fileID: 0}
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
@@ -8887,6 +8901,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 28
@@ -9055,7 +9071,7 @@ PrefabInstance:
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6
+      value: 20.2
       objectReference: {fileID: 0}
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
@@ -9135,7 +9151,7 @@ PrefabInstance:
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16
+      value: 30.2
       objectReference: {fileID: 0}
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
@@ -10493,7 +10509,7 @@ PrefabInstance:
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 16
+      value: 30.2
       objectReference: {fileID: 0}
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}

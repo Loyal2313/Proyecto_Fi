@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public float esperaInicial;
     public float esperaEntreEnemigos;
 	public float intervaloTrampas;
+	public static int puntosGM = 0;
 
     //AudioSource fuenteDeAudio;
     //public AudioClip AudioEnemigo, AudioTrampas;
@@ -87,7 +88,7 @@ public class GameManager : MonoBehaviour
 
     public void Registro()
     {
-        Application.OpenURL("");//Enlace de la web HUGO
+        Application.OpenURL("http://18.184.61.233/Unity/public/index.php/login");//Enlace de la web HUGO
     }
 
     public void Volver()
@@ -100,7 +101,7 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene("Creditos");
     }
 
-    public void Quit()
+    public void Salir()
     {
         Application.Quit();
     }
