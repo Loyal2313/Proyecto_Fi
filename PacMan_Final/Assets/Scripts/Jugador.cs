@@ -19,6 +19,8 @@ public class Jugador : MonoBehaviour
     public int vidas = 3;
     public float puntos = 0;
 
+    public int coleccionables = 21;
+
     private GameObject extra;
 
     public GameObject vida1, vida2, vida3, vida4, vida5, vida6;
@@ -75,6 +77,9 @@ public class Jugador : MonoBehaviour
             if (puntos > 0)
             {
                 puntos -= Time.deltaTime;
+            }
+            if(coleccionables < 1){
+                SceneManager.LoadScene("Creditos");
             }
         }
         if (vidas == 1)
@@ -197,6 +202,7 @@ public class Jugador : MonoBehaviour
             other.gameObject.SetActive(false);
 
             puntos = puntos + 50;
+            coleccionables--;
         }
 		if (other.gameObject.CompareTag("Armamento"))
         {	
@@ -204,12 +210,14 @@ public class Jugador : MonoBehaviour
 			tiempoHuida = 6;
 			huir=true;
             puntos = puntos + 200;
+            coleccionables--;
         }
 		if (other.gameObject.CompareTag("Vida"))
         {	
 			other.gameObject.SetActive(false);
 			vidas++;
             puntos = puntos + 300;
+            coleccionables--;
         }
     }
 
