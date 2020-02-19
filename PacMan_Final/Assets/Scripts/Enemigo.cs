@@ -14,6 +14,7 @@ public class Enemigo : MonoBehaviour
 
     Vector2 posicion;
 
+    public int asesinados = 0;
     void Start()
     {	
 
@@ -42,13 +43,13 @@ public class Enemigo : MonoBehaviour
                 //Huye del jugador
                 transform.position = Vector2.MoveTowards(transform.position, -presa, movimiento);
                 //Color temporal
-                //enemigo.material.color = Color.red;
+                GetComponent<Renderer>().material.color = Color.blue;
             }
 			else
 			{
 				transform.position = Vector2.MoveTowards(transform.position, presa, movimiento);
-				//enemigo.material.color = Color.green;
-			}
+                GetComponent<Renderer>().material.color = Color.green;
+            }
 		}
     }
 
@@ -60,7 +61,8 @@ public class Enemigo : MonoBehaviour
 			if (jugador.GetComponent<Jugador>().huir)
 			{
 				Destroy(gameObject);
-			}
+                asesinados++;
+            }
 			else
 			{
 				//Destruyo al jugador

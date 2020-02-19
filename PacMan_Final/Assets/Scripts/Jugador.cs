@@ -2,18 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class Jugador : MonoBehaviour
 {
-
 	//Velocidad
 	public float velocidad = 30.0f;
-	private Rigidbody rb;
-	public bool huir = false;
-    private float tiempo;
-	private int vidas = 3;
-    private int puntos = 480;
 
-	void Start () {
+	private Rigidbody rb;
+
+	public bool huir = false;
+
+    public float tiempo = 0;
+    public float tiempoHuida = 6;
+
+    public int vidas = 3;
+    public float puntos = 0;
+
+    private GameObject extra;
+
+    //Cajas de texto
+    public Text temporizador, puntuacion, extra1, extra2, extra3, extra4, extra5;
+    //variables para mostrar el tiempo
+    private string minutos, segundos, infoPuntos;
+
+    void Start () {
         //Capturo el componente rigidbody del jugador
         rb = GetComponent<Rigidbody>();	
 	}
@@ -35,9 +48,89 @@ public class Jugador : MonoBehaviour
             //Reinicio al menu
             SceneManager.LoadScene("menu");
         }
+
+        //Decremento el tiempo de huida
+        tiempoHuida -= Time.deltaTime;
+
+        //Incremento el tiempo
+        tiempo += Time.deltaTime;
+
+        //Escribo el tiempo
+        if (vidas > 0)
+        {
+            minutosSegundos(tiempo);
+            sumaPuntos(puntos);
+            if (puntos > 0)
+            {
+                puntos -= Time.deltaTime;
+            }
+        }
+        else
+        {
+            minutosSegundos(0);
+            puntos = puntos + ((GetComponent<Enemigo>().asesinados) * 100);
+            sumaPuntos(puntos);
+        }
+        GameObject[] extras = GameObject.FindGameObjectsWithTag("Extra");
+        //Recorro ese array y los destruyo
+        if (tiempo > 5)
+        {
+            foreach (GameObject extra in extras)
+            {
+                Destroy(extra);
+            }
+        }
     }
 
+    void minutosSegundos(float tiempo)
+    {
+        //Minutos
+        if (tiempo > 60)
+        {
+            minutos = "01";
+        }
+        else if (tiempo > 120)
+        {
+            minutos = "02";
+        }
+        else if (tiempo > 180)
+        {
+            minutos = "03";
+        }
+        else if (tiempo > 240)
+        {
+            minutos = "04";
+        }
+        else if (tiempo > 240)
+        {
+            minutos = "05";
+        }
+        else
+        {
+            minutos = "00";
+        }
+
+        //Segundos
+        int numSegundos = Mathf.RoundToInt(tiempo % 60);
+        if (numSegundos > 9)
+        {
+            segundos = numSegundos.ToString();
+        }
+        else
+        {
+            segundos = "0" + numSegundos.ToString();
+        }
+        //Escribo en la caja de texto
+        temporizador.text = minutos + ":" + segundos;
+    }
     // Es llamado una vez cada fixed frame
+
+    void sumaPuntos(float puntos)
+    {   
+        int puntosTotales = Mathf.RoundToInt(puntos);
+        infoPuntos = puntosTotales.ToString();
+        puntuacion.text = "Puntuacion: " + infoPuntos;
+    }
     void FixedUpdate()
 	{
 		//Capto el valor del eje vertical y horizontal
@@ -46,12 +139,12 @@ public class Jugador : MonoBehaviour
 		//Modifico la velocidad de la raqueta
 		GetComponent<Rigidbody2D>().velocity = new Vector2(h * velocidad, v * velocidad);
 
-		//Si los enemigos están huyendo y nos e ha acabado el tiempo, decremento el tiempo
-        if (huir && tiempo > 0)
+		//Si los enemigos están huyendo y se nos ha acabado el tiempo, decremento el tiempo
+        if (huir && tiempoHuida > 0)
         {
-            tiempo -= Time.deltaTime;
+            tiempoHuida -= Time.deltaTime;
             //Lo muestro en consola
-            Debug.Log(tiempo);
+            Debug.Log(tiempoHuida);
         }
         else
         {
@@ -67,11 +160,11 @@ public class Jugador : MonoBehaviour
             //Borro el coleccionable
             other.gameObject.SetActive(false);
 
-			vidas--;
+            puntos = puntos + 50;
             //Capturo un array con todos los objetos que tengan la etiqueta enemigo
             //GameObject[] enemigos = GameObject.FindGameObjectsWithTag("enemigo");
 
-            /*//Recorro ese array y los destruyo
+            /*// Recorro ese array y los destruyo
             foreach (GameObject enemigo in enemigos)
             {
                 Destroy(enemigo);
@@ -80,33 +173,15 @@ public class Jugador : MonoBehaviour
 		if (other.gameObject.CompareTag("Armamento"))
         {	
 			other.gameObject.SetActive(false);
-			tiempo = 10;
+			tiempoHuida = 6;
 			huir=true;
-		}
+            puntos = puntos + 200;
+        }
 		if (other.gameObject.CompareTag("Vida"))
         {	
 			other.gameObject.SetActive(false);
 			vidas++;
-		}
+            puntos = puntos + 300;
+        }
     }
 }
-
-/*public class ScriptDeltaTime : MonoBehaviour
-{
-    public GUIText guitext;
-
-    int number = 0;
-
-    float secondsCounter = 0;
-    float secondsToCount = 1;
-
-    void Update()
-    {
-        secondsCounter += Time.deltaTime;
-        if (secondsCounter >= secondsToCount)
-        {
-            secondsCounter = 0;
-            number++;
-        }
-        guitext.text = number.ToString();
-    }*/
