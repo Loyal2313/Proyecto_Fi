@@ -12,6 +12,9 @@ public class GameManager : MonoBehaviour
     public float esperaInicial;
     public float esperaEntreEnemigos;
 	public float intervaloTrampas;
+
+    //AudioSource fuenteDeAudio;
+    //public AudioClip AudioEnemigo, AudioTrampas;
     void Start()
     {	
         //LLamo a la rutina de crear enemigos
@@ -35,6 +38,9 @@ public class GameManager : MonoBehaviour
                 Quaternion rotacionEnemigo = Quaternion.identity;
                 Instantiate(enemigo, posicionEnemigo, rotacionEnemigo);
 
+                //fuenteDeAudio.clip = AudioEnemigo;
+                //fuenteDeAudio.Play();
+
                 //Espero un tiempo entre la creación de cada enemigo
                 yield return new WaitForSeconds(esperaEntreEnemigos);
             }
@@ -56,8 +62,10 @@ public class GameManager : MonoBehaviour
 			{
 				trampaH.SetActive (false);
 			}
-			//Espero un tiempo entre el intervalo de trampas.			
-			yield return new WaitForSeconds(intervaloTrampas);
+            //fuenteDeAudio.clip = AudioTrampas;
+            //fuenteDeAudio.PlayDelayed(5);
+            //Espero un tiempo entre el intervalo de trampas.			
+            yield return new WaitForSeconds(intervaloTrampas);
 				foreach (GameObject TrampaV in trampasV)
 				{
 					trampaV.SetActive (false);

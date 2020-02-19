@@ -31,6 +31,9 @@ public class Jugador : MonoBehaviour
     //variables para mostrar el tiempo
     private string minutos, segundos, infoPuntos;
 
+    AudioSource fuenteDeAudio;
+    public AudioClip AudioColeccion, AudioArmado;
+
     void Start () {
         //Capturo el componente rigidbody del jugador
         rb = GetComponent<Rigidbody>();	
