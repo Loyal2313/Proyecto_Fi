@@ -34,6 +34,15 @@ public class GameManager : MonoBehaviour
             {
                 //Instancio el enemigo en una posición aleatoria del tablero
                 Vector2 posicionEnemigo = new Vector2(Random.Range(-posicion.x, posicion.x), Random.Range(-posicion.y, posicion.y));
+
+                Vector2 sizeEnemigo = enemigo.transform.localScale;
+
+                int size = Random.Range(-6, 6);
+                sizeEnemigo.x = size;
+                sizeEnemigo.y = size;
+                //Vector2 sizeEnemigo = new Vector2(-size, size);
+                enemigo.transform.localScale = sizeEnemigo;
+
                 Quaternion rotacionEnemigo = Quaternion.identity;
                 Instantiate(enemigo, posicionEnemigo, rotacionEnemigo);
 

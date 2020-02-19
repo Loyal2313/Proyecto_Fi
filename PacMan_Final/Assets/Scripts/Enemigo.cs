@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.SceneManagement;
 
 public class Enemigo : MonoBehaviour
 {
@@ -13,8 +14,6 @@ public class Enemigo : MonoBehaviour
 	GameObject enemigo;
 
     Vector2 posicion;
-
-    public int asesinados = 0;
     void Start()
     {	
 
@@ -61,15 +60,15 @@ public class Enemigo : MonoBehaviour
 			if (jugador.GetComponent<Jugador>().huir)
 			{
 				Destroy(gameObject);
-                asesinados++;
             }
-			else
-			{
-				//Destruyo al jugador
-				Destroy(other.gameObject);
-				//Paro el tiempo del juego para que no se creen más enemigos
-				Time.timeScale = 0;
-			}
+            else
+            {
+                GameObject[] Enemigos = GameObject.FindGameObjectsWithTag("Enemigo");
+                foreach (GameObject enemigo in Enemigos)
+                {
+                    Destroy(enemigo);
+                }
+            }
         }
     }
 }

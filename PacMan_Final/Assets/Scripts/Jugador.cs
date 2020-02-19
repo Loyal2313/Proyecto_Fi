@@ -13,16 +13,18 @@ public class Jugador : MonoBehaviour
 
 	public bool huir = false;
 
-    public float tiempo = 0;
-    public float tiempoHuida = 6;
+    public float tiempo;
+    public float tiempoHuida;
 
     public int vidas = 3;
     public float puntos = 0;
 
     private GameObject extra;
 
+    public GameObject vida1, vida2, vida3, vida4, vida5, vida6;
+
     //Cajas de texto
-    public Text temporizador, puntuacion, extra1, extra2, extra3, extra4, extra5;
+    public Text temporizador, puntuacion;
     //variables para mostrar el tiempo
     private string minutos, segundos, infoPuntos;
 
@@ -55,6 +57,16 @@ public class Jugador : MonoBehaviour
         //Incremento el tiempo
         tiempo += Time.deltaTime;
 
+        GameObject[] extras = GameObject.FindGameObjectsWithTag("Extra");
+        //Recorro ese array y los destruyo
+        if (tiempo > 5)
+        {
+            foreach (GameObject extra in extras)
+            {
+                Destroy(extra);
+            }
+        }
+        //Vidas
         //Escribo el tiempo
         if (vidas > 0)
         {
@@ -65,20 +77,44 @@ public class Jugador : MonoBehaviour
                 puntos -= Time.deltaTime;
             }
         }
-        else
+        if (vidas == 1)
+        {
+            vida1.SetActive (true);
+            vida2.SetActive(false);
+        }
+        if (vidas == 2)
+        {
+            vida2.SetActive(true);
+            vida3.SetActive(false);
+        }
+        if (vidas == 3)
+        {
+            vida1.SetActive(true);
+            vida2.SetActive(true);
+            vida3.SetActive(true);
+            vida4.SetActive(false);
+            vida5.SetActive(false);
+            vida6.SetActive(false);
+        }
+        if (vidas == 4)
+        {
+            vida4.SetActive(true);
+            vida5.SetActive(false);
+        }
+        if (vidas == 5)
+        {
+            vida5.SetActive(true);
+            vida6.SetActive(false);
+        }
+        if (vidas == 6)
+        {
+            vida6.SetActive(true);
+        }
+        if(vidas<1)
         {
             minutosSegundos(0);
-            puntos = puntos + ((GetComponent<Enemigo>().asesinados) * 100);
             sumaPuntos(puntos);
-        }
-        GameObject[] extras = GameObject.FindGameObjectsWithTag("Extra");
-        //Recorro ese array y los destruyo
-        if (tiempo > 5)
-        {
-            foreach (GameObject extra in extras)
-            {
-                Destroy(extra);
-            }
+            SceneManager.LoadScene("Creditos");
         }
     }
 
@@ -161,14 +197,6 @@ public class Jugador : MonoBehaviour
             other.gameObject.SetActive(false);
 
             puntos = puntos + 50;
-            //Capturo un array con todos los objetos que tengan la etiqueta enemigo
-            //GameObject[] enemigos = GameObject.FindGameObjectsWithTag("enemigo");
-
-            /*// Recorro ese array y los destruyo
-            foreach (GameObject enemigo in enemigos)
-            {
-                Destroy(enemigo);
-            }*/
         }
 		if (other.gameObject.CompareTag("Armamento"))
         {	
@@ -182,6 +210,32 @@ public class Jugador : MonoBehaviour
 			other.gameObject.SetActive(false);
 			vidas++;
             puntos = puntos + 300;
+        }
+    }
+
+    public void OnCollisionEnter2D(Collision2D other)
+    {
+        //Si se choca con el jugador
+        if (other.gameObject.CompareTag("Enemigo"))
+        {
+            if (huir)
+            {
+                puntos = puntos + 100;
+            }
+            else
+            {
+                this.transform.position = Vector2.zero;
+                vidas--;
+            }
+        }
+
+        if (other.gameObject.CompareTag("TrampaH") || other.gameObject.CompareTag("TrampaV"))
+        {
+            if (!huir)
+            {
+                this.transform.position = Vector2.zero;
+                vidas--;
+            }
         }
     }
 }

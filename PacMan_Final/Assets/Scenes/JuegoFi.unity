@@ -302,6 +302,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 10058080}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &56790490 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7469873227178129760, guid: 31681fd5daa90524f9bbbdd7544a9b20,
+    type: 3}
+  m_PrefabInstance: {fileID: 7469873227129795770}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &56790491 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
@@ -321,7 +327,7 @@ GameObject:
   - component: {fileID: 63755301}
   m_Layer: 0
   m_Name: Arriba (2)
-  m_TagString: TrampaH
+  m_TagString: Extra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -535,7 +541,7 @@ GameObject:
   - component: {fileID: 90087143}
   m_Layer: 5
   m_Name: Vidas
-  m_TagString: Untagged
+  m_TagString: Extra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -953,6 +959,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &219717931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7469873227178129760, guid: 31681fd5daa90524f9bbbdd7544a9b20,
+    type: 3}
+  m_PrefabInstance: {fileID: 1003514160}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &227577838
 GameObject:
   m_ObjectHideFlags: 0
@@ -1232,10 +1244,10 @@ MonoBehaviour:
   trampaH: {fileID: 1663712159}
   trampaV: {fileID: 709808881}
   posicion: {x: 48, y: 30}
-  numeroEnemigos: 100
+  numeroEnemigos: 1000
   esperaInicial: 5
-  esperaEntreEnemigos: 5
-  intervaloTrampas: 2
+  esperaEntreEnemigos: 4
+  intervaloTrampas: 3
 --- !u!4 &267548524
 Transform:
   m_ObjectHideFlags: 0
@@ -1336,6 +1348,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Vida4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469873227178129760, guid: 31681fd5daa90524f9bbbdd7544a9b20,
+        type: 3}
+      propertyPath: m_TagString
+      value: Coleccionable
       objectReference: {fileID: 0}
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
@@ -2121,7 +2138,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   velocidad: 5
-  asesinados: 0
 --- !u!1 &435024873
 GameObject:
   m_ObjectHideFlags: 0
@@ -2768,7 +2784,7 @@ GameObject:
   - component: {fileID: 590047878}
   m_Layer: 5
   m_Name: Armamento
-  m_TagString: Untagged
+  m_TagString: Extra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2921,6 +2937,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemigo (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 3432976568816651404, guid: d5e39c22511f54f47a559f078840c794,
+        type: 3}
+      propertyPath: m_TagString
+      value: Extra
+      objectReference: {fileID: 0}
     - target: {fileID: 750243892593638837, guid: d5e39c22511f54f47a559f078840c794,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2991,6 +3012,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: d93a1035d7b9bd64fb583f1f9cee2931, type: 2}
+    - target: {fileID: 1129851079795985242, guid: d5e39c22511f54f47a559f078840c794,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d5e39c22511f54f47a559f078840c794, type: 3}
 --- !u!4 &635915209 stripped
@@ -3092,7 +3118,7 @@ GameObject:
   - component: {fileID: 669298954}
   m_Layer: 5
   m_Name: Enemigos
-  m_TagString: Untagged
+  m_TagString: Extra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3657,7 +3683,7 @@ GameObject:
   - component: {fileID: 775593835}
   m_Layer: 0
   m_Name: Derecha (9)
-  m_TagString: TrampaV
+  m_TagString: Extra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
@@ -4957,6 +4983,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vida6
       objectReference: {fileID: 0}
+    - target: {fileID: 7469873227178129760, guid: 31681fd5daa90524f9bbbdd7544a9b20,
+        type: 3}
+      propertyPath: m_TagString
+      value: Coleccionable
+      objectReference: {fileID: 0}
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5121,6 +5152,12 @@ MonoBehaviour:
   tiempoHuida: 10
   vidas: 3
   puntos: 0
+  vida1: {fileID: 56790490}
+  vida2: {fileID: 1408622724}
+  vida3: {fileID: 1415549360}
+  vida4: {fileID: 2055066856}
+  vida5: {fileID: 1245942448}
+  vida6: {fileID: 219717931}
   temporizador: {fileID: 1661624158}
   puntuacion: {fileID: 721301751}
 --- !u!50 &1020177768
@@ -6132,6 +6169,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vida2
       objectReference: {fileID: 0}
+    - target: {fileID: 7469873227178129760, guid: 31681fd5daa90524f9bbbdd7544a9b20,
+        type: 3}
+      propertyPath: m_TagString
+      value: Coleccionable
+      objectReference: {fileID: 0}
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -6334,6 +6376,12 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1245942448 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7469873227178129760, guid: 31681fd5daa90524f9bbbdd7544a9b20,
+    type: 3}
+  m_PrefabInstance: {fileID: 1945888971}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1255404898
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7157,6 +7205,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1408622724 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7469873227178129760, guid: 31681fd5daa90524f9bbbdd7544a9b20,
+    type: 3}
+  m_PrefabInstance: {fileID: 1194814727}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1415549360 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7469873227178129760, guid: 31681fd5daa90524f9bbbdd7544a9b20,
+    type: 3}
+  m_PrefabInstance: {fileID: 1955224244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1420730258
 GameObject:
   m_ObjectHideFlags: 0
@@ -7409,7 +7469,7 @@ GameObject:
   - component: {fileID: 1455777269}
   m_Layer: 5
   m_Name: Coleccionables
-  m_TagString: Untagged
+  m_TagString: Extra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8394,6 +8454,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Coleccionable (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 4895371231148586983, guid: f1ab680e5661fdb40a932eb995f3ca22,
+        type: 3}
+      propertyPath: m_TagString
+      value: Extra
+      objectReference: {fileID: 0}
     - target: {fileID: 4895371231148586982, guid: f1ab680e5661fdb40a932eb995f3ca22,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8586,6 +8651,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Armamento
       objectReference: {fileID: 0}
+    - target: {fileID: 7469873227178129760, guid: 31681fd5daa90524f9bbbdd7544a9b20,
+        type: 3}
+      propertyPath: m_TagString
+      value: Extra
+      objectReference: {fileID: 0}
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8700,7 +8770,7 @@ GameObject:
   - component: {fileID: 1922696902}
   m_Layer: 5
   m_Name: Trampas
-  m_TagString: Untagged
+  m_TagString: Extra
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8899,6 +8969,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Vida5
       objectReference: {fileID: 0}
+    - target: {fileID: 7469873227178129760, guid: 31681fd5daa90524f9bbbdd7544a9b20,
+        type: 3}
+      propertyPath: m_TagString
+      value: Coleccionable
+      objectReference: {fileID: 0}
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -8973,6 +9048,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Vida3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469873227178129760, guid: 31681fd5daa90524f9bbbdd7544a9b20,
+        type: 3}
+      propertyPath: m_TagString
+      value: Coleccionable
       objectReference: {fileID: 0}
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
@@ -9710,6 +9790,12 @@ Transform:
   m_Father: {fileID: 1158787410}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2055066856 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7469873227178129760, guid: 31681fd5daa90524f9bbbdd7544a9b20,
+    type: 3}
+  m_PrefabInstance: {fileID: 295745072}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2077653263
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10320,6 +10406,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Vida1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7469873227178129760, guid: 31681fd5daa90524f9bbbdd7544a9b20,
+        type: 3}
+      propertyPath: m_TagString
+      value: Coleccionable
       objectReference: {fileID: 0}
     - target: {fileID: 7469873227178129761, guid: 31681fd5daa90524f9bbbdd7544a9b20,
         type: 3}
