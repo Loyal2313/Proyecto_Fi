@@ -7,13 +7,9 @@ $letras = '/^[A-Za-z" "áéíóúñÁÉÍÓÚÑ-]{2,20}$/';
 
 $idUsuario = 0;
 
-function ImprimeArray($array){
-    echo "<pre>";
-    print_r($array);
-    echo "</pre>";
-}
-
 ?>
+
+<!-- **********FORMULATIO DE LOGIN********** -->
 
 <div class="container">
 
@@ -34,9 +30,9 @@ function ImprimeArray($array){
                 $nameCorrect = false;
             }
             else {
-                $users = $resultado->fetch_array(MYSQLI_BOTH); //O también $resultado->fetch_array()
+                $users = $resultado->fetch_array(MYSQLI_BOTH);
                 $is = false;
-                while ($users != null){ //Recorro el resultado
+                while ($users != null){
                     $string = $users['nombre']." ";
                     if (strpos($string, $_POST["name"]) !== false){
                         $nameCorrect = true;
@@ -63,12 +59,12 @@ function ImprimeArray($array){
             }
             else {
                 $resultado = $db->query('SELECT clave FROM usuarios WHERE nombre="'.$_POST["name"].'"');
-                $pw = $resultado->fetch_array(MYSQLI_BOTH); //O también $resultado->fetch_array()
+                $pw = $resultado->fetch_array(MYSQLI_BOTH);
                 while ($pw != null){ //Recorro el resultado
                     $p = $pw[0];
                     $pw = $resultado->fetch_array(MYSQLI_BOTH);
                 }
-                $resultado->free(); //Libero de la memoria
+                $resultado->free();
                 echo "";
                 if (password_verify($campo_clave,$p)){
                     $pwCorrect = true;
@@ -80,16 +76,18 @@ function ImprimeArray($array){
         }
         ?><br><br><br>
 
-        <div class="col-12"><button id="login" type="submit">Login</button></div><br>
-        <div class="col-12"><a id="register" href="http://18.184.61.233/Unity/public/index.php/registro">Registro</a></div><br>
+        <div class="col-12"><button id="login" type="submit">Login</button></div><br><br>
+        <div class="col-12"><a id="register" href="http://18.184.61.233/Unity/public/index.php/registro">No tengo una cuenta</a></div><br>
     </form>
     </div>
 
 <?php
 
 
+// DATOS CORRECTOS
 
 
+// SACO EL ID DEL USUARIO PARA LUEGO ACTUALIZAR SU FECHA DE ACCESO
 if ($nameCorrect == true && $pwCorrect == true){
     $_SESSION["usuario"] = $_POST["name"];
     $result = $db-> query('SELECT id FROM usuarios WHERE nombre = "'.$_SESSION["usuario"].'"');
@@ -101,10 +99,10 @@ if ($nameCorrect == true && $pwCorrect == true){
     $result->free(); //Libero de la memoria
     echo "";
 
-
+// ME ASEGURO DE QUE ESTÉ ACTIVO, Y SACO SU IMAGEN DE PERFIL
     $query = $db->query('SELECT activo, imagen FROM usuarios WHERE id = '.$idUsuario);
     $activo = $query->fetch_array(MYSQLI_BOTH);
-    while ($activo != null) { //Recorro el resultado
+    while ($activo != null) {
         $activoUsuario = $activo[0];
         if ($activoUsuario == 1) {
             $_SESSION["foto"] = $activo[1];
@@ -116,7 +114,7 @@ if ($nameCorrect == true && $pwCorrect == true){
         }
         $activo = $query->fetch_array(MYSQLI_BOTH);
     }
-    $query->free(); //Libero de la memoria
+    $query->free();
     echo "";
 }
 
