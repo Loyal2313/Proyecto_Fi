@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <link rel="stylesheet" type="text/css" href="<?php echo $_SESSION['public'] ?>css/app.css">
 
+    <!--FUENTES-->
+    <link href="https://fonts.googleapis.com/css?family=Tomorrow&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Exo+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
@@ -97,7 +102,8 @@
 <main>
 
     <header>
-        <h1 style="text-decoration: underline; font-weight: bold">Juego Square-Man</h1>
+        <h1 style="text-decoration: underline; font-weight: bold">Square-Man</h1>
+        <h4>La versión Pro de <a target="_blank" href="https://en.wikipedia.org/wiki/Pac-Man">Pacman</a></h4>
     </header>
 
     <section class="container-fluid">
