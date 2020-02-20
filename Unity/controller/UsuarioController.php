@@ -24,18 +24,17 @@ class UsuarioController
 
     public function admin(){
 
-        //Compruebo permisos
-        $this->view->permisos();
-
         //LLamo a la vista
         $this->view->vista("admin","index");
 
     }
 
+
+
     public function entrar(){
 
         //Si ya está autenticado, le llevo a la página de inicio del panel
-        if (isset($_SESSION['usuario']) && $_SESSION['usuario'] == "MegaAdmin"){
+        if (isset($_SESSION['usuario'])){
 
             $this->admin();
 
