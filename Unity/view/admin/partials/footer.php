@@ -2,8 +2,8 @@
 </main>
 <footer class="center-align">
     © <?php echo date("Y") ?>
-    <a href="https://google.com" target="_blank" title="Jairo García Rincón">
-        UhhYeah
+    <a href="" title="aargh">
+        UhhYeah @_@
     </a>
 </footer>
 
