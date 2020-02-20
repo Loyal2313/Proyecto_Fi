@@ -1,19 +1,16 @@
-<h3>Acceso</h3>
-<div class="row">
-    <form class="col m12 l6" method="POST">
+<div class="container">
+    <form class="col-12" method="POST">
         <div class="row">
-            <div class="input-field col s12">
+            <div class="input-field col-6">
+                <p class="campos">Usuario:</p>
                 <input id="usuario" type="text" name="usuario" value="">
-                <label for="usuario">Usuario</label>
             </div>
-            <div class="input-field col s12">
+            <div class="input-field col-6">
+                <p class="campos">Clave:</p>
                 <input id="clave" type="password" name="clave" value="">
-                <label for="clave">Contraseña</label>
             </div>
-            <div class="input-field col s12">
-                <button class="btn waves-effect waves-light" type="submit" name="acceder">Acceder
-                    <i class="material-icons right">person</i>
-                </button>
+            <div class="input-field col-6">
+                <button type="submit" style="background-color: red" name="acceder">Acceder</button>
             </div>
         </div>
     </form>
