@@ -1,11 +1,5 @@
 <?php
 
-function ImprimeArray($array){
-    echo "<pre>";
-    print_r($array);
-    echo "</pre>";
-}
-
 $user = $_SESSION['usuario'];
 echo "<h3 style='margin-bottom: 5%;'>Partidas de <span style='color: yellow;'>".$user."</span></h3>";
 
@@ -46,7 +40,6 @@ while ($part != null){ //Recorro el resultado
 
 $partidas->free(); //Libero de la memoria
 echo "";
-
 
 
 
