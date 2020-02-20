@@ -1,5 +1,3 @@
-/* LAYOUT *************************************************************************************************************/
-
 html{
     color: white;
 }
@@ -9,6 +7,8 @@ body{
     min-height: 100vh;
     flex-direction: column;
     background-color: #140007;
+    font-family: 'Tomorrow', sans-serif;
+
 }
 
 nav{
@@ -17,11 +17,16 @@ nav{
     -webkit-box-shadow: none;
     padding: 0 2rem;
     border: solid 2px #808200;
+    font-family: 'Exo 2', sans-serif;
 }
 
 nav img{
     width: 2.5rem;
     padding-top: 0.8rem;
+}
+
+nav a:hover {
+    color: yellow;
 }
 
 main {
@@ -30,6 +35,10 @@ main {
     max-width: 1920px;
     padding: 0 2rem;
     margin: 0 auto;
+}
+
+header {
+    margin-bottom: 1%;
 }
 
 header h1{
@@ -57,16 +66,31 @@ footer a:hover{
     text-decoration: underline;
 }
 
-header h1 {
+header {
     margin-top: 2%;
     text-align: center;
+    border: solid 2px #808200;
+
 }
 
-/* SECTION ************************************************************************************************************/
+header h1 {
+    margin-bottom: 2%;
+}
+
+header h4 {
+    font-size: 160%;
+}
+
+header h4 a {
+    color: white;
+}
+
+header h4 a:hover {
+    color: yellow;
+}
 
 section h3{
     font-size: 1.5rem;
-    border-bottom: 1px solid #808200;
     padding-bottom: 0.3rem;
 }
 
@@ -108,4 +132,47 @@ section .col-12 {
 
 .partida {
     font-size: 1.5rem;
+}
+
+#register {
+    color: white;
+}
+
+#register:hover {
+    color: yellow;
+}
+
+#centro {
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+#acerca {
+    margin-top: 2%;
+    text-align: center;
+    border: solid 2px #808200;
+    padding: 5%;
+    font-family: 'Source Code Pro', monospace;
+
+}
+
+@media (max-width: 700px) {
+    #centro {
+        width: 20rem;
+    }
+    header h1 {
+        font-size: 250%;
+    }
+}
+
+@media (max-width: 575px) {
+    #centro {
+        width: 15rem;
+    }
+    header h1 {
+        font-size: 200%;
+    }
+    header h4 {
+        font-size: 150%;
+    }
 }
